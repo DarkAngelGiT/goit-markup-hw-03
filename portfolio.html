@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -44,93 +48,111 @@
     </header>
     <main>
       <!-- Portfolio -->
-      <section class="portfolio">
+      <section class="portfolio section">
         <div class="container">
           <h1 class="visually-hidden">Portfolio</h1>
           <ul class="portfolio-filter list">
-            <li>
+            <li class="portfolio-filter-item">
               <button class="portfolio-filter-btn current" type="button">Все</button>
             </li>
-            <li>
+            <li class="portfolio-filter-item">
               <button class="portfolio-filter-btn" type="button">Веб-сайты</button>
             </li>
-            <li>
+            <li class="portfolio-filter-item">
               <button class="portfolio-filter-btn" type="button">Приложения</button>
             </li>
-            <li>
+            <li class="portfolio-filter-item">
               <button class="portfolio-filter-btn" type="button">Дизайн</button>
             </li>
-            <li>
+            <li class="portfolio-filter-item">
               <button class="portfolio-filter-btn" type="button">Маркетинг</button>
             </li>
           </ul>
         </div>
         <!-- Examples -->
         <div class="container">
-          <ul class="examples list">
-            <li class="examples-item">
+          <ul class="examples card-set list">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio1.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">Технокряк</h2>
-                <p class="examples-text">Веб-сайт</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">Технокряк</h2>
+                  <p class="examples-text">Веб-сайт</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio2.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">
-                  Постер <span lang="en">New Orlean vs Golden Star</span>
-                </h2>
-                <p class="examples-text">Дизайн</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">
+                    Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="examples-text">Дизайн</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio3.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">Ресторан <span lang="en">Seafood</span></h2>
-                <p class="examples-text">Приложение</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">Ресторан <span lang="en">Seafood</span></h2>
+                  <p class="examples-text">Приложение</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio4.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">Проект <span lang="en"></span>Prime</h2>
-                <p class="examples-text">Маркетинг</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">Проект <span lang="en"></span>Prime</h2>
+                  <p class="examples-text">Маркетинг</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio5.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">Проект <span lang="en">Boxes</span></h2>
-                <p class="examples-text">Приложение</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">Проект <span lang="en">Boxes</span></h2>
+                  <p class="examples-text">Приложение</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio6.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title"><span lang="en">Inspiration has no Borders</span></h2>
-                <p class="examples-text">Веб-сайт</p>
+                <div class="examples-container">
+                  <h2 class="examples-title"><span lang="en">Inspiration has no Borders</span></h2>
+                  <p class="examples-text">Веб-сайт</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio7.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">Издание <span lang="en">Limited Edition</span></h2>
-                <p class="examples-text">Дизайн</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">Издание <span lang="en">Limited Edition</span></h2>
+                  <p class="examples-text">Дизайн</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio8.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title">Проект <span lang="en">LAB</span></h2>
-                <p class="examples-text">Маркетинг</p>
+                <div class="examples-container">
+                  <h2 class="examples-title">Проект <span lang="en">LAB</span></h2>
+                  <p class="examples-text">Маркетинг</p>
+                </div>
               </a>
             </li>
-            <li class="examples-item">
+            <li class="examples-item card-set-item">
               <a class="examples-link link" href="">
                 <img src="./images/portfolio9.jpg" alt="" width="370" height="294" />
-                <h2 class="examples-title"><span lang="en">Growing Business</span></h2>
-                <p class="examples-text">Приложение</p>
+                <div class="examples-container">
+                  <h2 class="examples-title"><span lang="en">Growing Business</span></h2>
+                  <p class="examples-text">Приложение</p>
+                </div>
               </a>
             </li>
           </ul>

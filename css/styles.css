@@ -23,6 +23,9 @@
   --color-text-footer: rgba(255, 255, 255, 0.6);
   --btn-hover-color: #188ce8;
   --border-bottom-header-color: #ececec;
+  --border-porf-color: #eeeeee;
+  --items: 3;
+  --indent: 30px;
 }
 
 h1,
@@ -32,6 +35,12 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -56,7 +65,8 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 2px solid tomato;
+
+  /* outline: 2px solid tomato; */
 }
 
 .visually-hidden {
@@ -66,11 +76,31 @@ body {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/**
+  |============================
+  | сітка із застосуванням flex-box
+  |============================
+*/
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--indent) / 2);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+  margin: calc(var(--indent) / 2);
 }
 
 /* HEADER */
@@ -145,11 +175,6 @@ body {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 /* HERO */
@@ -246,13 +271,8 @@ body {
   display: flex;
 }
 
-.works-list-item {
-  display: inline-flex;
+.works-list-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.works-list-item:last-child {
-  margin-right: 0;
 }
 
 /* TEAM */
@@ -269,22 +289,13 @@ body {
   line-height: 1.17;
 }
 
-.team-list {
-  display: flex;
-}
-
 .team-list-item {
-  display: block;
-  margin-right: 30px;
+  --items: 4;
   padding-bottom: 30px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-list-item:last-child {
-  margin-right: 0;
 }
 
 .team-list-title {
@@ -361,20 +372,27 @@ body {
 
 /*---- Portfolio ----*/
 /* Buttons */
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
 .portfolio-filter-btn {
   color: var(--title-text-color);
   background-color: var(--background-color-secondary);
-
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-
   border: 1px solid transparent;
   border-radius: 4px;
-
   cursor: pointer;
+  padding: 6px 22px;
+}
+
+.portfolio-filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-filter .portfolio-filter-btn.current {
@@ -386,6 +404,8 @@ body {
 .portfolio-filter-btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Examples */
@@ -395,9 +415,15 @@ body {
   background-color: var(--primary-white-color);
 }
 
+.examples-container {
+  display: block;
+  border: 1px solid var(--border-porf-color);
+  border-top: none;
+  padding: 20px 24px;
+}
+
 .examples-title {
   color: var(--title-text-color);
-
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
